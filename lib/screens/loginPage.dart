@@ -48,7 +48,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     // TODO: implement initState
-    Login.setIp('');
     super.initState();
     subscription = Connectivity()
         .onConnectivityChanged
@@ -118,6 +117,18 @@ class _LoginPageState extends State<LoginPage> {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(10.0))),
     );
+    final loginButton2 = RaisedButton(onPressed: (){  _isConnnection
+        ? login()
+        : AlertApp.onAlertButtonPressed(context,
+        'حدث خطا فى تسجيل الدخول', 'تاكد من الاتصال بالانترنت');
+    }, child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text("تسجيل الدخول",
+          textAlign: TextAlign.center,
+          style: style.copyWith(
+              color: Colors.white)),
+    ),
+      color: Colors.green,);
     final loginButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -172,7 +183,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 35.0,
                     ),
-                    loginButton,
+                    loginButton2,
                     SizedBox(
                       height: 35.0,
                     ),

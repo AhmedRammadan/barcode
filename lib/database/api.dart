@@ -11,6 +11,7 @@ class Api {
     ip = await Login.getIp();
     if (ip == null || ip.length < 11) {
       hasIp = false;
+      await Login.setLogout();
     } else {
       hasIp = true;
     }

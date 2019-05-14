@@ -98,7 +98,7 @@ class _ScanPageState extends State<ScanPage>
     if (Quantity.isNotEmpty) {
       await Api.postBarcode(
           code: barcode, qty: Quantity, count_id: "${inventory.count_id}");
-      print('entity_id : ${barcode.entity_id}');
+     // print('entity_id : ${barcode.entity_id}');
       getAllBarcode();
     } else {
       print('Quantity 5 : ' + 'isEmpty');
