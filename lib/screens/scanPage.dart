@@ -4,7 +4,6 @@ import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:barcode/database/api.dart';
 import 'package:barcode/languages/homePageLang.dart';
 import 'package:barcode/languages/selectLanguage.dart';
@@ -274,17 +273,3 @@ class _ScanPageState extends State<ScanPage>
     );
   }
 }
-/*
-Container(
-margin: EdgeInsets.only(left: 30, right: 30, bottom: 10),
-alignment: !LTR ? Alignment.centerRight : Alignment.centerLeft,
-height: animatable.value * 60,
-child: FloatingActionButton(
-backgroundColor: Colors.greenAccent,
-onPressed: barcodeScan,
-child: Padding(
-padding: const EdgeInsets.all(8.0),
-child: Image.asset('assets/ic_barcode.png'),
-),
-),
-),*/

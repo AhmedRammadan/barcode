@@ -40,6 +40,8 @@ class _LoginPageState extends State<LoginPage> {
         AlertApp.onAlertButtonPressed(context, 'حدث خطا فى تسجيل الدخول',
             'تاكد من اسم المستخدم او كلمة المرور او ip');
       }
+    }else{
+      print('cleck................');
     }
   }
 

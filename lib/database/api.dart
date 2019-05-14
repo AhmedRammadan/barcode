@@ -14,7 +14,8 @@ class Api {
     } else {
       hasIp = true;
     }
-    // ip ='192.168.1.14';
+   // hasIp = true;
+   // ip ='192.168.1.14';
   }
 
   static String ip;
